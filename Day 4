@@ -44,7 +44,7 @@ from emp12
 where mod(age,2)=0;
 80.select ename,sysdate-hiredate from emp; 이결과에서 소수점 이하는 안나오게 반올림하시오.
 select ename,round(sysdate-hiredate,0)
-from emp
+from emp;
 81.이름,입사한 날짜부터 오늘까지 총 몇주 근무했는지 출력하시오 
 select ename,round(round(sysdate-hiredate,0)/7,0)
 from emp;
@@ -59,14 +59,14 @@ select next_day(add_months(sysdate,100),'목요일')
 from dual;
 85.81/11/17 일에 입사한 사원의 이름과 입사일을 출력하시오 .
 select ename,hiredate
-from emp
+from emp;
 where hiredate='81/11/17';
 86.이름,입사일,입사한 요일을 출력하시오! 
 select ename,hiredate,to_char(hiredate,'day')
 from emp;
 87.수요일에 입사한 사원들의 이름과 입사일을 출력하시오.
 select ename,hiredate,to_char(hiredate,'day')
-from emp
+from emp;
 where to_char(hiredate,'day') = '수요일'
 88.내가 무슨 요일에 태어났는지 확인하시오. (to_date로 변환하는 기능을 알아야함.)
 select to_char(to_date('92/01/14','RR/MM/DD'),'day')
