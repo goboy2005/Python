@@ -1,3 +1,6 @@
+
+Day 2 Problems
+
 3. emp 테이블의 컬럼이 무엇무엇이 있는지 확인 하시오!
 describe emp;
 4. 이름,월급,커미션을 출력하시오
