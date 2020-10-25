@@ -1,5 +1,5 @@
 
-Day 2 Problems
+Day 2 Problems & Queries 
 
 3. emp 테이블의 컬럼이 무엇무엇이 있는지 확인 하시오!
 describe emp;
