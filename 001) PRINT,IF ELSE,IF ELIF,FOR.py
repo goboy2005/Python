@@ -76,13 +76,9 @@ print(a+b)
  import keyword
     print(keyword.kwlist)
 
-
-
-
 4.위의 예약어를 변수로 사용하면 에러가 나는지 직접 테스트 하시오
  
 and=1 
- 
 
 
 § 4.변수에 값 대입하기
@@ -102,9 +98,6 @@ b varchar2(10):='scott';
 파이썬의 기본 철학을 확인하는 코드
 
 import this 
-
-
-
 
 파이썬은 c/c java 와는 달리 변수를 선언할때 숫자형 자료인지 문자형 자료인지
 자료형을 명시하지 않아도 됩니다.
@@ -126,9 +119,6 @@ print(type(b))
 
 a=2
 print (type(a))
-
-
-
 
 § 5.주석 처리하기(#)
 
@@ -387,9 +377,7 @@ for  i  in (1, 2, 3):
 for  i  in range(10):
     print (i)
 
-
-
-                                           키    값 
+                                         키    값 
 4. 사전형 범위인 경우                ↓    ↓
 m = { 'i' : '나는',  'am' : '입니다', 'boy':'소년'}
 for  i  in  m:
@@ -443,8 +431,6 @@ dice=[1,2,3,4,5,6]
 for i in range(1,11):                                 # 1이상 11 미만으로 이해하면 됩니다. 
     print (random.choice(dice))
 
-
-
 17.동전을 10번던지세요 ~ 
 
 import random
@@ -469,8 +455,6 @@ print(cnt)                                                       #결과를 왼�
                                                          #for문이 다 완료 되면 print(cnt)가 수행된다
 
 
-
-
 19.주사위를 100번 던져서 주사위의 눈이 3이 나오는 횟수를 출력하시오
 
 import random
@@ -492,7 +476,6 @@ for i in range(1,101):
     if result == 5:
         cnt=cnt+1
     print(cnt)
-
 
 21.동전을 10000번 던져서 앞면이 나올확률을 출력하시오
 
