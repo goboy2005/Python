@@ -1,10 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Nov 24 17:50:59 2020
-
-@author: goboy
-"""
-
 파이썬을 통해서 우리가 얻어야할 지식
 
 1.빅데이터 수집을 위한 웹스크롤링을 할 수 있는 능력 키우기
@@ -52,10 +45,6 @@ spyder 프로그램에서 ctl + enter 키로 코드를 실행하거나 F5를 누
 
 2.아래와 같은 결과가 나오게 spyder 에서 프로그래밍 하시오!
 
-2
-3
-4
-
 for i in [2,3,4]:
     print(i)
 
@@ -87,16 +76,11 @@ print(a+b)
  import keyword
     print(keyword.kwlist)
 
-
-
-
+   
 4.위의 예약어를 변수로 사용하면 에러가 나는지 직접 테스트 하시오
  
 and=1 
  
-
-
-
 § 4.변수에 값 대입하기
 
 -다양한 값을 변수에 대입하는 방법을 배웁니다.
@@ -131,8 +115,6 @@ a number(10):=2;                            a=b
 
 b='scott'
 print(type(b))
-
-
 
 § 6.숫자형 변수의 자료형을 확인하시오
 
@@ -322,9 +304,9 @@ a=int( ( input('숫자를 입력하세요') )
 라는 메세지가 출력되게 하시오.
 
 숫자를 입력하세요 2
-  2가 주사위의 눈에 있습니다.
-숫자를 입력하세요 7
+2가 주사위의 눈에 있습니다.
 
+숫자를 입력하세요 7
 7가 주사위의 눈에 없습니다.
 
 a = int((input('숫자를 입력하세요')))
@@ -466,17 +448,15 @@ import random
    import random
     
     coin=['앞면','뒷면']
-    cnt = 0                                                  #cnt 라는 변수에 0을 할당한다 
+    cnt = 0                                           #cnt 라는 변수에 0을 할당한다 
     for i in range(1,11):
-       result = random.choice(coin)             # 동전 던진결과를 result 변수에 해당한다.
+       result = random.choice(coin)                  # 동전 던진결과를 result 변수에 해당한다.
         if reslut == '앞면': 
-            cnt=cnt+1                               #할당연산자 오른쪽 부터 실행하고 실행한
-print(cnt)                                                       #결과를 왼쪽 변수에 할당해 준다.
+            cnt=cnt+1                                 #할당연산자 오른쪽 부터 실행하고 실행한
+print(cnt)                                             #결과를 왼쪽 변수에 할당해 준다.
                                                        #for문의 실행문이 아닌 for 문과 위치를
                                                          #맞춰서 같은 라인에 #print(cnt) 를 쓰면은 
                                                          #for문이 다 완료 되면 print(cnt)가 수행된다
-
-
 
 
 19.주사위를 100번 던져서 주사위의 눈이 3이 나오는 횟수를 출력하시오
@@ -490,7 +470,7 @@ if result == 3:
     cnt=cnt+1
 print(cnt)
 
-20.주사위를 1000번 지고 주사위의 눈이 5가 나올 확률을 구하시오.
+20.주사위를 1000번 던지고 주사위의 눈이 5가 나올 확률을 구하시오.
 
 import random
 dice=[1,2,3,4,5,6]
