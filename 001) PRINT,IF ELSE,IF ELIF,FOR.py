@@ -387,7 +387,7 @@ for  i  in  m:
 for  i  in  'i  am  a  boy':
     print(i)
 
-§  for 루프(loop) 문의 range 사용법 정리
+■ for 루프(loop) 문의 range 사용법 정리
 
 for  i  in  range(6):
     print (i)    # 0 부터 5까지 출력한다.
