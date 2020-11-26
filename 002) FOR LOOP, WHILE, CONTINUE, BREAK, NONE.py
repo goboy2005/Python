@@ -189,7 +189,6 @@ print(np.var(a))
 print(np.std(a))
 
 
-
 ■ Q-35.숫자 1번부터 10번까지 출력하시오
 
  for i in range(1,11):
@@ -207,7 +206,7 @@ for i in range(1,11):
 
 for i in range(0,11):
     if i % 2 == 1:
-        continue         # 이부분을 지나가는 것이니까 제외 되고 나온다. 
+        continue        
     print(i)
 
 ■ Q-38 알고리즘 문제 2번 1부터 10까지의 합을 파이썬으로 구현하시오
@@ -263,7 +262,6 @@ for  i  in  range( 1,  a+1 ):
 else:
     print('perfect')
 
-
 ■ Q-44.아래와 같이 숫자를 물어보게 하고 숫자를 입력하면 해당 숫자만큼 *이 출력되게 하세요!          
 
 a = int(input( '숫자를 입력하세요'))
@@ -280,7 +278,6 @@ b= int(input('숫자를 입력하세요'))
 while b>0:
     print('★' * b)
     b=b-1
-
 
 ■ Q-46. 주사위 2개를 동시에 던져서 두개의 주사위의 눈의 합이 10이 되는
 확률을 구하시오! 
