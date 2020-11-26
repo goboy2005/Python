@@ -1,3 +1,5 @@
+Python Day 1 Problems 
+
 ■ Q-1.아래의 스크립트를 배치모드로 실행하시오!
 
 for i in[1,2,3,4,5,6,7]:
