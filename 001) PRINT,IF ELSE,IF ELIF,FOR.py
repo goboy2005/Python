@@ -3,9 +3,6 @@
 for i in[1,2,3,4,5,6,7]:
     print(i)
 
-spyder 와 같은 텍스트 창에서 프로그램 코드를 작성하는 것을 말한다.
-spyder 프로그램에서 ctl + enter 키로 코드를 실행하거나 F5를 누르면 실행된다.
-
 ■ Q-2.아래와 같은 결과가 나오게 spyder 에서 프로그래밍 하시오!
 
 for i in [2,3,4]:
@@ -164,7 +161,6 @@ for i in range(1,101):
     if result == 5:
         cnt=cnt+1
     print(cnt)
-
 
 ■ Q-21.동전을 10000번 던져서 앞면이 나올확률을 출력하시오
 
