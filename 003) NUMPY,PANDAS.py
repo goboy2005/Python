@@ -351,9 +351,6 @@ import pandas as pd
 emp = pd.read_csv("c://data//emp3.csv")
 print(emp [ ['ename','sal'] ] ) 
 
-설명: emp[ ['컬럼명1','컬럼명2'] ] 
-
-
 
 ■ Q-77 (아래의 SQL을 판다스로 구현하시오)
 select ename,sal,job,hiredate
@@ -374,15 +371,12 @@ import pandas as pd
 emp = pd.read_csv("c://data//emp3.csv")
 print( emp [ ['ename','sal']]          [emp['job']=='SALESMAN'] )
                                           
-
-
+ 
 ■ Q-79월급이 3000 이상인 사원들의 이름과 월급을 출력하시오
 
 import pandas as pd
 emp=pd.read_csv("c://data//emp3.csv")
 print ( emp [ ['ename','sal',]]  [emp['sal'] >= 3000 ]  )
-
-
 
 
 ■ Q-80 아래의 SQL을 판다스로 구현하시오
