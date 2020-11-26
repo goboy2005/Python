@@ -1,3 +1,9 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Nov 24 23:37:32 2020
+@author: goboy
+"""
+
 Python Day 1 Problems 
 
 ■ Q-1.아래의 스크립트를 배치모드로 실행하시오!
