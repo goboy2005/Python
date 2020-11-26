@@ -5,6 +5,8 @@ Created on Wed Nov 25 23:50:46 2020
 @author: goboy
 """
 
+Python Day 2 Problems 
+
 ■ Q-23 for loop 문을 이용해서 구구단 2단을 출력하시오
 2 x 1 =2
 2 x 2 = 4 
