@@ -445,4 +445,3 @@ for i in range(1,1001):
         cnt=cnt+1
 print(1- (cnt/1000))
 
-
