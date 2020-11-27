@@ -29,6 +29,8 @@ for i in range (1,10):
 for i in range (1,10):
     print( '9 x', i,'=',9*i)
 
+(printing a double for loop and ruuning a for loop to get the result could be differnt) 
+ 
 ■ Q-25 주사위를 10번던졌을때 나오는 주사위의 눈을 10개 출력하시오
 
 import random
