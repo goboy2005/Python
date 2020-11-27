@@ -94,18 +94,17 @@ for j in range(1,51):
 리스트에 담으시오
 
 import random
-
-coin=['앞면','뒷면']
-a = []
-for j in range(1,51):
+dice=[1,2,3,4,5,6]
+a=[]
+for j in range(2,52):
     cnt=0
     for i in range(1,101):
-        result =random.choice(coin)
-        if result == '앞면':
-            cnt=cnt+1
-    print(cnt/100)    
-   a.append( cnt/100)
-print(a) 
+        result=random.choice(dice)
+        if result %2 == 0:
+            cnt += 1
+  
+    a.append(cnt/100)
+print(a)
 
 ■ Q-31 두개의 동전을 300번 던져서 동시에 둘다 앞면이 나오는
 횟수를 출력하시오
@@ -169,22 +168,21 @@ print(np.std(x))  # 7.440842962998211
 ■ Q-34 한개의 주사위를 360번 던져서 3의 배수의 눈이 나오는 횟수를  구하는 것을 1000번 하고 그 1000개를 X 변수에 넣고
 이 X 의 평균,분산,표준편차를 출력하시오 
 
-import random
 import numpy as np
 
-dice=[1,2,3,4,5,6]                                  ----주사위 생성
-a=[]                                                  ----cnt 에 0을 할당합니다.
-
-for j in range(1,1001):      ----(360번 반복수행하는것을) 1000번 반복수행하는 loop
+import random
+dice=[1,2,3,4,5,6]
+a=[]
+for j in range(1,1001):
     cnt=0
-    for i in range(1,361):                    ---360번 반복수행하는 for loop 
-        result=random.choice(dice)   ----주사위의 눈을 하나 출력해서 result에담는다.
-        if result %3 == 0:               ---결과값에서       
-            cnt=cnt+1                    
-     a.append(cnt)
+    for i in range(1,361):
+        result=random.choice(dice)
+        if result %3 == 0:
+            cnt=cnt+1
+    a.append(cnt) 
 
 print(np.mean(a))
-print(np.var(a))        
+print(np.var(a))
 print(np.std(a))
 
 
@@ -219,11 +217,11 @@ print(cnt)
 ■ Q-39 1부터 100번까지 출력하는 for loop문을 작성하는데 다음과 같이 숫자를
 물어보게 해서 입력된 숫자까지만 출력되게하시오 
 
-a = int( input( '숫자를 입력하세요'))
+a=int(input(  '숫자를 입력하세요'))
 for i in range(1,101):
-    print(i)
-    if i == a:
+    if i == a+1:
         break
+    print(i)
 
 ■ Q-40 (알고리즘 문제 19번) 두숫자를 각가 물어보게 하고 입력받아 
 두 숫자의 최대공약수를 출력하시오 ! 
@@ -248,20 +246,35 @@ for i in range(1,a+1):
 
 ■ Q-42.위의 입력한 숫자까지 다 출력하면 아래에 perfect 이란 단어가 출력되게 
 하시오! 
-a= int ( input( '숫자를 입력하게 하시오'))
-for i in range(1,a+1):
-    print(i)
-else:
-    print('perfect')   
 
-■ Q-42 위의 코드를 수정해라 중단할 숫자를 또 물어보게 해서
-아래와 같이 실행되게 하시오! 
+a = int( input(' 숫자를 입력하세요 ~')  )
+
 for  i  in  range( 1,  a+1 ):
     print (i)
 else:
     print('perfect')
 
-■ Q-44.아래와 같이 숫자를 물어보게 하고 숫자를 입력하면 해당 숫자만큼 *이 출력되게 하세요!          
+ Q-43. 위의 코드를 수정해서 중단할 숫자를 또 물어보게 해서 
+아래와 같이 실행되게하시오 !
+숫자를 입력하세요 ~    10
+중단한 숫자를 입력하세요 ~  5
+
+ 1                           
+ 2
+ 3
+ 4
+ 5
+
+
+a = int( input(' 숫자를 입력하세요 ~')  )
+b = int( input(' 중단할 숫자를 입력하세요 ~')  )
+
+for  i  in  range( 1,  a+1 ):
+    print (i)
+    if i == b:
+        break
+
+■ Q-44.아래와 같이 숫자를 물어보게 하고 숫자를 입력하면 해당 숫자만큼  *이 출력되게 하세요!          
 
 a = int(input( '숫자를 입력하세요'))
 x=0
