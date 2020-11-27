@@ -21,13 +21,9 @@ for i in range (1,10):
    ……
 9 X 8 = 72 
 
-for i in range (1,10):
-    print( '2 x', i,'=',2*i)
-for i in range (1,10):
-    print( '3 x', i,'=',3*i)
-     ………
-for i in range (1,10):
-    print( '9 x', i,'=',9*i)
+for j in range(2,10):
+    for i in range(1,10):
+        print( j, 'x', i, '=', j*i )
 
 (printing a double for loop and ruuning a for loop to get the result could be differnt) 
  
