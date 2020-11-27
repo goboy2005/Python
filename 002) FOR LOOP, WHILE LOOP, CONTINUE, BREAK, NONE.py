@@ -357,11 +357,3 @@ for i in range(0,10001): 
     if (result1**2) + (result2**2) <=1 :
         cnt = cnt+1  
 print(cnt/10000*4)
-
-■ Q-52 아래의 수학식을 파이썬으로 구현해서 답을 출력하시오
-(1-2i)^2 -2(1-2i)-12 
-
-c1 = complex(1,-2)
-result = c1**2 - 2*c1 -12
-print(result)  # (-17+0j)
-
