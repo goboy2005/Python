@@ -32,6 +32,7 @@ a=2
 print (type(a))
 
 ■ Q-7.아래의 리스트에서 문자 k를 출력하시오!
+
 mmm = [ 'a','b','d','e','k','m','n','z']
 
  mmm = ['a','b','c','d','k']
@@ -55,7 +56,6 @@ import random
 
 dice=[1,2,3,4,5,6]
 print(random.choice(dice))
-
 
 ■ Q-10.점심시간에 했던 주사위의 눈이 6개 있는 변수를 만들고 
 if 을 써서 주사위의 눈에 숫자 5가 있습니다. 라는 메세지가 출력되게 하시오 
@@ -81,8 +81,6 @@ if a in dice:
   2가 주사위의 눈에 있습니다.
 숫자를 입력하세요 7
 
-7가 주사위의 눈에 없습니다.
-
 a = int((input('숫자를 입력하세요')))
 dice=[1,2,3,4,5,6]
 if a in dice:
@@ -94,8 +92,6 @@ else:
 
 첫번째 숫자를 입력하세요 ~3
 두번째 숫자를 입력하세요 ~2
-
-3은2보다 큽니다. 
 
 a = int( input( '첫번째 숫자를 입력하세요' ) )
 b = int( input( '두번쨰 숫자를 입력하세요' ) )
@@ -132,20 +128,20 @@ for i in range(1,11):
 
 import random
     
-    coin=['앞면','뒷면']
-    for i in range(1,11):
-        print (random.choice(coin))
+coin=['앞면','뒷면']
+for i in range(1,11):
+    print (random.choice(coin))
 
 ■ Q-18.동전을 10번 던졌을떄 앞면이 나오는 횟수가 어떻게 되는가
 
-   import random
+import random
     
-    coin=['앞면','뒷면']
-    cnt = 0                                                
-    for i in range(1,11):
-       result = random.choice(coin)             
-        if reslut == '앞면': 
-            cnt=cnt+1                              
+coin=['앞면','뒷면']
+cnt = 0                                                
+for i in range(1,11):
+   result = random.choice(coin)             
+    if reslut == '앞면': 
+        cnt=cnt+1                              
 print(cnt)                                                
                                                                                               
 ■ Q-19.주사위를 100번 던져서 주사위의 눈이 3이 나오는 횟수를 출력하시오
@@ -155,8 +151,8 @@ dice=[1,2,3,4,5,6]
 cnt=0
 for i in range(1,101):
     result = random.choice(dice)
-if result == 3:
-    cnt=cnt+1
+        if result == 3:
+            cnt=cnt+1
 print(cnt)
 
 ■ Q-20.주사위를 1000번 지고 주사위의 눈이 5가 나올 확률을 구하시오
@@ -168,7 +164,7 @@ for i in range(1,101):
     result=random.choice(dice)
     if result == 5:
         cnt=cnt+1
-    print(cnt)
+print(cnt)
 
 ■ Q-21.동전을 10000번 던져서 앞면이 나올확률을 출력하시오
 
@@ -186,6 +182,7 @@ print(cnt/10000)
 동전은 앞면이 나올 확률은 어떻게 되는가 
 
 import random
+
 dice=[1,2,3,4,5,6]
 coin=['앞면','뒷면']
 cnt=0
