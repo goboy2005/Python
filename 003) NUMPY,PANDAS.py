@@ -5,7 +5,7 @@ Created on Thu Nov 26 20:36:54 2020
 @author: goboy
 """
 
-Day 3 Problems 
+Python Day 3 Problems 
 
 ■ Q-53.주사위 1개를 10번 던지시오 ! 
 
