@@ -397,4 +397,16 @@ print( '표준평균의 평균값은 %.2f 이고 분산값은 %.2f 이고 표준
 
 Q-121 어느 비행기
 
+import numpy as np
+import random
 
+avg=18
+std=3
+N=10000000
+cnt=0
+population=np.random.randn(N)* std+avg 
+for i in range (1,1001):
+    result=np.random.choice(population,36).mean()
+    if result > 17:
+        cnt+=1
+print(cnt/1000)
