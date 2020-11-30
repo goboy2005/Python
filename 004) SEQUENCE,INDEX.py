@@ -7,23 +7,19 @@ Created on Mon Nov 30 23:03:39 2020
 
 
 # Q-86 이름이 SCOTT인 사원의 이름과 월급을 출력하시오 
-        (Print the name and salary of an employee named 'SCOTT') 
-
+   
 import pandas as pd
 emp=pd.read_csv("c://data//emp3.csv")
 print( emp   [[   'ename','sal']]  [ emp ['ename'] == 'SCOTT'  ]   )
 
-
 Q-87 위의 scott 을 담은 문자형 변수 a에서 알파벳 0를 출력하시오 
-        (print the letter o from scott) 
-
+ 
 a='scott'
 print(a[2])
 
 Q-88 아래의 문자형 변수에서 맨 끝의 철자인 h를 출력하시오! 
          b='smith'
-        (print the letter h from smith) 
-
+  
 b='smith'
 print(b[4])
 
@@ -39,9 +35,6 @@ import pandas as pd
 emp=pd.read_csv("c://data//emp3.csv")
 for i in emp  [ 'ename']:
     print(i[0])
-
-
-
 
 
 Q-90 판다스를 이용해서 emp3.csv를 가져와서 이름의 끌글자를 출력하시오
@@ -91,7 +84,6 @@ for i in emp['ename']:
     if i[1] == 'M':
         print(i)
 
-
 Q-95  아래의 SQL을 판다스로 구현하시오
 select substr(ename,1,3)
   from emp ;
@@ -136,10 +128,6 @@ for i, k in zip(emp['ename'],  emp['sal'] ):
     print(i+ str(k)) 
     
 
-
-
-
-
 Q-100 주사위의 눈 6개를 100개 담은 리스트 dice 100을 만드시오 
 
 dice100=[1,2,3,4,5,6] *100
@@ -147,7 +135,7 @@ print(dice)
 
 
 Q-101 초등학생 키가 10ㅐ가 들어있는 아래의 tall 리스트의 요소 10개를
-10000개로 증가시켜서 
+10000개로 증가시켜서 만드시오 
 Tall=[129.3, 130.2, 132.5, 134.7, 136.3, 137.8, 138.1, 140.2, 142.3 , 145.2] 
 
 tall10000=[129.3, 130.2, 132.5, 134.7, 136.3, 137.8, 138.1, 140.2, 142.3 , 145.2] *100000
@@ -155,6 +143,7 @@ print(tall10000)
 
 Q-102.위의 모집단의 평균값,분산,표준편차 출력하시오 
 
+import numpy as np
 tall10000=[129.3, 130.2, 132.5, 134.7, 136.3, 137.8, 138.1, 140.2, 142.3 , 145.2] *100000
 
 print(np.mean(tall10000))
