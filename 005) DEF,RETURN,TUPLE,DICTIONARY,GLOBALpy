@@ -5,8 +5,8 @@ Created on Tue Dec  1 23:55:37 2020
 @author: goboy
 """
 
-
 ■ Q-122.동전의 앞면과 뒷을 포함하는 리스트 coin을 만드시오 
+
 coin=['앞면','뒷면'] 
 
 ■ Q-123위에서 만든 coin의 요소를 10000개로 늘려서 coin_10000변수에 담으시오
@@ -22,7 +22,6 @@ coin=['앞면','뒷면']
 
 coin_10000=coin*10000
 print(np.random.choice(coin_10000,10))
-
 
 ■ Q-125 위에서 추출한 샘플 10개에서 앞면이 몇번 나오는지 출력하시오 
 
@@ -40,7 +39,6 @@ for  i  in   result:
 a=[7,2,3,4,5]
 a[2]=17
 print(a)
-
 
 ■ Q-127 아래의 숫자 데이터들을 튜플로 생성하시오! 튜플 변수의 이름은 point 라고 하세요 !
 (0.01,0.02,0.03,0.04,0.05)
@@ -60,7 +58,7 @@ point=(0.01,0.02,0.03,0.04,0.05)
 for i in point:
     print(i)
 
-Plus
+&
 
 for j in 'scott':
     print(j)
@@ -75,7 +73,6 @@ fruit={}
 for i,k in zip(a,b):
     fruit[i]=k 
 print(fruit)
-
 
 ■ Q-131. (점심)아래의 SQL을 파이썬으로 구현하시오 !
 
@@ -146,9 +143,7 @@ print (a[1:])
 
 def initcap(v):
     return v[0:1].upper() + v[1:].lower()
-
 print(initcap('scott'))
-
 
 ■ 141.abs 함수를 사용하지 말고 if 문을 이용해서 절대값을 출력하는 
 my_abs 라는 함수를 생성하시오 
