@@ -156,7 +156,7 @@ for i in range(1,21): # 20번 반복하면서
     print(random.choice(tall10000) ) # 모단에서 랜덤으로 키하나를 추출 
 
 
-문제103. 위의 모집단 tall10000 에서 표본을 20개를 랜덤으로 추출하시오 !
+■ Q-103. 위의 모집단 tall10000 에서 표본을 20개를 랜덤으로 추출하시오 !
 
 import  numpy  as  np 
 import  random  
