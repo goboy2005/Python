@@ -5,6 +5,7 @@ Created on Mon Nov 30 23:03:39 2020
 @author: goboy
 """
 
+Day 4 Python Problems 
 
 ■ Q-86 이름이 SCOTT인 사원의 이름과 월급을 출력하시오 
    
