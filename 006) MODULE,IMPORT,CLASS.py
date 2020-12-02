@@ -4,8 +4,7 @@ Created on Wed Dec  2 21:39:52 2020
 
 @author: goboy
 """
-
-Day 6 Python Problmes 
+Python Day 6 Problems
 
 ■ Q-148 my_cal.py모듈 스크립트안에 곱하기를 하는 아래의 함수를 추가하시오! 
 
