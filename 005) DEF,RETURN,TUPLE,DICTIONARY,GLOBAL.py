@@ -5,6 +5,8 @@ Created on Tue Dec  1 23:55:37 2020
 @author: goboy
 """
 
+Day 5 Python Problems 
+
 ■ Q-122.동전의 앞면과 뒷을 포함하는 리스트 coin을 만드시오 
 
 coin=['앞면','뒷면'] 
