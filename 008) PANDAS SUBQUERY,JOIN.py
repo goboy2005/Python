@@ -6,7 +6,7 @@ Created on Fri Dec  4 22:30:51 2020
 """
 
 
-Q-191 숫자를 물어보게하고 숫자를 입력하면 해당 숫자만큼 
+■ Q-191 숫자를 물어보게하고 숫자를 입력하면 해당 숫자만큼 
 1번부터 출력되게하는 코드를 작성하시오 !
 
 a = int( input('숫자를 입력하세요 ') )
@@ -20,7 +20,7 @@ for  i  in  range(1, a+1):
 잘못된 값을 입력하셨습니다. 말고도 정확한 에러에 대한 원인을 파악을 하고싶다면 ? 
 아래와 같이 작성하면 됩니다. 어떻게 작성하냐면
 
-Q-192. 위의 코드에 예외처리를 해서 숫자를 물어볼때 문자를 입력하면
+■ Q-192. 위의 코드에 예외처리를 해서 숫자를 물어볼때 문자를 입력하면
 잘못된 값을 입력하셨습니다.라고 메세지가 출력되게하시오
 
 try:
@@ -51,7 +51,7 @@ except  Exception  as  e:
 invalid literal for int() with base 10: 'a'
 
 
-Q-193.판다스를 이용해서 emp3.csv의 데이터를 로드하는데 
+■ Q-193.판다스를 이용해서 emp3.csv의 데이터를 로드하는데 
 이름을 물어보게 하고 이름을 물어보게 하고 이름을 입력하면 해당 사원의
 이름과 월급이 출력되게 하시오! 
 
@@ -63,7 +63,7 @@ emp=pd.read_csv("c:\\data\\emp3.csv")
 print(emp[['ename','sal' ] ] [ emp['ename'] ==name.upper() ])
 
 
-Q-194.위의 코드에 사용자 정의 예외처리를 해서 월급이 고소득자는 
+■ Q-194.위의 코드에 사용자 정의 예외처리를 해서 월급이 고소득자는 
 해당 사원의 월급을 볼수 없습니다. 라는 메세지가 출되게게 하시오
 ( 월급이 3000이상인 사원들을 고소득자로 보고 작성하시오) 
 
@@ -93,7 +93,7 @@ if result>3000:
 print(result)
     #print(emp[['ename']] , [emp['ename']] == name.upper() )
 
-Q-195. 위의 코드에 사용자 정의 예외처리를 해서 월급이 고소득자는
+■ Q-195. 위의 코드에 사용자 정의 예외처리를 해서 월급이 고소득자는
 해당 사원의 월급을 볼 수 없습니다. 라는 메세지가 출력되게하시오
  (월급이 3000 이상인 사원들을 고소득자로 보고 작성하시오)
 
@@ -117,7 +117,7 @@ Traceback (most recent call last):
 
 Exception: 해당 사원의 월급은 볼 수 없습니다
 
-Q-196위의 코드를 수정해서 이름을 물어보게하고 이름과 직업을 
+■ Q-196위의 코드를 수정해서 이름을 물어보게하고 이름과 직업을 
  출력하는 코드로 작성하는데 직이 SALESMAN 이면
  해당 사원의 정보는 볼수 없습니다. 라는 메세직 출력되면서
  프로그램이 종료되게 하시오! 
@@ -132,7 +132,7 @@ else:
     print(emp['job']  [ emp['ename'] == name.upper()].values[0])
 
 
-Q-197.아래처럼 사원 이름 물어보게하고 사원이름을 입력하면
+■ Q-197.아래처럼 사원 이름 물어보게하고 사원이름을 입력하면
 해당 사원의 이름과 월급이 출력되게 하시오! 
 
 
@@ -141,7 +141,7 @@ name=input('사원 이름을 입력하세요~')
 emp=pd.read_csv('c:\\data\\emp3.csv")
 print(emp [[ 'ename',sal']]  [emp['ename']==name.upper() ] )
 
-Q-198 없는 사원이름을 입력하면 해당 사원은 없습니다. 
+■ Q-198 없는 사원이름을 입력하면 해당 사원은 없습니다. 
 
 import pandas as pd
 try:
@@ -171,7 +171,7 @@ except LookupError:
     되어서 해당 사원은 없습니다. 라는 메세지가 출력되는 겁니다. 
 
 
-Q-199(점심시간 문제) 직업을 물어보게하고 직업을 입력하면
+■ Q-199(점심시간 문제) 직업을 물어보게하고 직업을 입력하면
 해당 사원의 이름과 직업과 월급이 출력되게 하는 코드를
 성하는데 없는 직업을 입력하면 해당직업은 사원테이블에 없습니다
 라는 메세지가 력되게하시오!
@@ -188,12 +188,12 @@ except LookupError:
 
 
 
-Q-200.딕셔너리 자료형을 만들고 위와같이 type을 확인하시오 
+■ Q-200.딕셔너리 자료형을 만들고 위와같이 type을 확인하시오 
 
 b={'사과':'apple','배':'perar'}
 print(type(b))
 
-Q-201.아래와 이 두개의 숫자를 각각 물어보게 하고 아래의 메세지가
+■ Q-201.아래와 이 두개의 숫자를 각각 물어보게 하고 아래의 메세지가
 출력되게 하시오! 
 
 첫째 숫자를 입력하세요 1113
@@ -205,7 +205,7 @@ c=a%b
 print('%d를 %d로 나누면 %d 가 남습니다' %(a,b,c)) 
 
 
-Q-202.  아래와 같이 실행되게 코드를 수행하시오 !
+■ Q-202.  아래와 같이 실행되게 코드를 수행하시오 !
 
 첫번째 숫자를 입력하시오 ~   1113
 두번째 숫자를 입력하시오 ~   23
@@ -233,7 +233,7 @@ SQL --- Pandas, Pandas ---SQL
 예제: emp[ ['ename','sal']] [emp['ename']=='SCOTT']
 
 
-Q-203 dept3.csv를 판다스로 로드해서 dept데이터 프레임
+■ Q-203 dept3.csv를 판다스로 로드해서 dept데이터 프레임
 전체를 출력하시오! 
 
 import pandas as pd
@@ -242,14 +242,14 @@ print(dept)
 
 
 
-Q-204.부서치가 Dallas 의 부서번호와 부서명(dname)을 
+■ Q-204.부서치가 Dallas 의 부서번호와 부서명(dname)을 
 출력하시오! 
 
 import pandas as pd
 dept=pd.read_csv("c:\\data\\dept3.csv")
 print(dept[['deptno','dname' ]]   [dept[ 'loc' ] =='DALLAS' ] )
 
-Q-205. DALLAS 에서 근무하는 사원들의 이름과 부서위치를 출력하시오
+■ Q-205. DALLAS 에서 근무하는 사원들의 이름과 부서위치를 출력하시오
 
 Pandas
 
@@ -265,7 +265,7 @@ print ( result[ ['ename', 'loc'] ] [ result['loc']=='DALLAS' ] )
 
 
 
-Q-206.월급이 3000 이상인 사들의 이름과 월급과 부서위치를 출력하시오! 
+■ Q-206.월급이 3000 이상인 사들의 이름과 월급과 부서위치를 출력하시오! 
 
 select e.ename,e.sal,d.loc
   from emp e, dept d
@@ -279,7 +279,7 @@ result=pd.merge( emp,dept, on = 'deptno')
 print(result[['ename','sal','loc'] ]  [result['sal'] >=3000])
 
 
-Q-207.부서번호가 10번,20번인 사원들의 이름과 부서위치와 부서번호를 출력하시오!
+■ Q-207.부서번호가 10번,20번인 사원들의 이름과 부서위치와 부서번호를 출력하시오!
 
 select  e.ename, d.loc, e.deptno
             from  emp  e,  dept  d
@@ -292,7 +292,7 @@ result=pd.merge( emp,dept, on = 'deptno')
 print(result[[ 'ename','loc','deptno']] [result['deptno'].isin([10,20])])
 
 
-Q-208 월급이 1000에서 3000인 사이인 사원들의 이름과 월급과 부서위치를 출력하시오
+■ Q-208 월급이 1000에서 3000인 사이인 사원들의 이름과 월급과 부서위치를 출력하시오
 
 select e.ename,e.sal,d.loc
   from emp e, dept d
@@ -305,7 +305,7 @@ dept=pd.read_csv("c:\\data\\dept3.csv")
 result=pd.merge( emp,dept, on = 'deptno') 
 print(result[[ 'ename','sal','loc']] [result['sal'].between(1000,3000)])
 
-Q-209 아래의 SQL을 판다스로 구현하시오 ! 
+■ Q-209 아래의 SQL을 판다스로 구현하시오 ! 
 
 select e.ename,d.loc
   from emp e, dept d
@@ -322,7 +322,7 @@ print(result[[ 'ename','loc']])
 
 
 
-Q-210. 아래의 SQL을 Pandas 로 구현하시오 
+■ Q-210. 아래의 SQL을 Pandas 로 구현하시오 
 
 select  e.ename,  d.loc
            from  emp  e  full  outer  join  dept   d
@@ -335,7 +335,7 @@ dept = pd.read_csv("c:\\data\\dept3.csv")
 result = pd.merge( emp, dept, on = 'deptno' , how='outer')
 print( result[['ename',  'loc']] ) 
 
-Q-211 아래의 서브쿼리를 Pandas 로 구현하시오! 
+■ Q-211 아래의 서브쿼리를 Pandas 로 구현하시오! 
 
 select ename,sal
    from emp
@@ -350,7 +350,7 @@ jjob=emp['job'] [emp ['ename']=='SCOTT'].values[0]
 print(emp[['ename','sal' ]] [emp['job']==jjob]  )
 
 
-Q-212 아래의 서브쿼리의 결과를  Pandas 로 수행하시오! 
+■ Q-212 아래의 서브쿼리의 결과를  Pandas 로 수행하시오! 
 
 select ename,sal
    from emp
@@ -366,7 +366,7 @@ jjob=emp['job'] [emp ['ename']=='SCOTT'].values[0]
 print(emp[['ename','sal' ]] [(emp['job']==jjob) & (emp['ename']!='SCOTT')]  )
 
 
-Q-213 아래의 SQL을 판다스로 구현하시오! 
+■ Q-213 아래의 SQL을 판다스로 구현하시오! 
 
 select max(sal)
    from emp
@@ -376,7 +376,7 @@ import pandas as pd
 emp=pd.read_csv("c:\\data\\emp3.csv")
 print(emp['sal'] [emp['deptno'] ==20].max() )
 
-Q-214 아래의 SQL을 판다스로 구현하시오!  
+■ Q-214 아래의 SQL을 판다스로 구현하시오!  
 
 select min(sal)
    from emp 
@@ -386,21 +386,21 @@ import pandas as pd
 emp=pd.read_csv("c:\\data\\emp3.csv")
 print(emp['sal'] [emp['job'] =='SALESMAN' ].min() )
 
-Q-215. emp12.csv 를 판다스 데이터 프레임으로 만들어서 출력하시오 !
+■ Q-215. emp12.csv 를 판다스 데이터 프레임으로 만들어서 출력하시오 !
 
 import   pandas  as  pd
 
 emp12 = pd.read_csv("c:\\data\\emp12.csv")
 print(emp12)
 
-Q-216. 우리반에서 최소 나이를 출력하시오 !
+■ Q-216. 우리반에서 최소 나이를 출력하시오 !
 
 import   pandas  as  pd
 
 emp12 = pd.read_csv("c:\\data\\emp122.csv")
 print(emp12['AGE'].min() )
 
-Q-217 아래의 SQL을 판다스로 구현하시오! 
+■ Q-217 아래의 SQL을 판다스로 구현하시오! 
 
 select job,max(sal)
     from emp
@@ -411,14 +411,7 @@ emp=pd.read_csv("c:\\data\\emp3.csv")
 result=emp.groupby('job')['sal'].max()
 print(result)
 
-
-
-
-
-
-
-
-Q-218 아래의 SQL을 판다스로 구현하시오! 
+■ Q-218 아래의 SQL을 판다스로 구현하시오! 
 
 select deptno,sum(sal)
   from emp
@@ -430,9 +423,7 @@ result=emp.groupby('deptno')['sal'].sum().reset_index()
 print(result)
 
 
-
-
-Q-219아래의 SQL을 판다스로 구현하시오! 
+■ Q-219아래의 SQL을 판다스로 구현하시오! 
 
 select deptno,sum(sal)
     from emp
@@ -445,7 +436,7 @@ result=emp.groupby('deptno')['sal'].sum().reset_index()
 print(result[[ 'deptno','sal']] [result['deptno'] !=20])
 
 
-Q-220
+■ Q-220
 
 
 
