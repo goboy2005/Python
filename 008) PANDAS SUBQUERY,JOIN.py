@@ -14,13 +14,6 @@ a = int( input('숫자를 입력하세요 ') )
 for  i  in  range(1, a+1):
     print (i)
 
-설명: 위의 코드의 경우에는 숫자를 입력할 때 아파벳 a를 넣으면 
-예외처리가 되어서 잘못된 값을 입력하셨습니다. 라는 말만 나오고 
-에러에 대한 정확한 원인파악은 하기가 어렵습니다. 
-
-잘못된 값을 입력하셨습니다. 말고도 정확한 에러에 대한 원인을 파악을 하고싶다면 ? 
-아래와 같이 작성하면 됩니다. 어떻게 작성하냐면
-
 ■ Q-192. 위의 코드에 예외처리를 해서 숫자를 물어볼때 문자를 입력하면
 잘못된 값을 입력하셨습니다.라고 메세지가 출력되게하시오
 
@@ -40,7 +33,6 @@ except  Exception  as  e:
 import pandas as pd
 name=input('이름을 입력하세요')
 emp=pd.read_csv("c:\\data\\emp3.csv")
-
 print(emp[['ename','sal' ] ] [ emp['ename'] ==name.upper() ])
 
 
@@ -51,7 +43,7 @@ print(emp[['ename','sal' ] ] [ emp['ename'] ==name.upper() ])
 import pandas as pd
 name=input('이름을 입력하세요')
 emp=pd.read_csv("c:\\data\\emp3.csv")
-result=emp['sal' ] [ emp['ename'] == name.upper()].values[0]
+result=emp['sal'] [ emp['ename'] == name.upper()].values[0]
 if result>3000:
     raise Exception('해당 사원의 월급은 볼 수 없습니다')
 print(result)
@@ -97,14 +89,12 @@ print(emp [[ 'ename',sal']]  [emp['ename']==name.upper() ] )
 
 import pandas as pd
 try:
-    
     name=input('사원 이름을 입력하세요~') 
-    result=emp['ename'] [emp['ename']==name.upper()].values[0]
     emp=pd.read_csv("c:\\data\\emp3.csv")
-    print(emp [[ 'ename','sal']]  [emp['ename']==result] )
+    print(emp[['ename','sal']] [emp['ename']==name.upper()].values[0])
 except LookupError:
     print('해당 사원은 없습니다')
-    
+
 ■ Q-199(점심시간 문제) 직업을 물어보게하고 직업을 입력하면
 해당 사원의 이름과 직업과 월급이 출력되게 하는 코드를
 성하는데 없는 직업을 입력하면 해당직업은 사원테이블에 없습니다
@@ -113,13 +103,12 @@ except LookupError:
 import pandas as pd
 try:
     zob=input('직업을 입력하세요')
-    result=emp['job'] [emp['job']==zob.upper()].values[0]
     emp=pd.read_csv("c:\\data\\emp3.csv")
+    result=emp['job'] [emp['job']==zob.upper()].values[0]    
     print(emp[['ename','job','sal']] [emp['job']==result])
 except LookupError:
         print('해당 직업을 가진 사람은없습니다')
-
-
+            
 ■ Q-200.딕셔너리 자료형을 만들고 위와같이 type을 확인하시오 
 
 b={'사과':'apple','배':'perar'}
@@ -157,7 +146,7 @@ print(dept)
 
 import pandas as pd
 dept=pd.read_csv("c:\\data\\dept3.csv")
-print(dept[['deptno','dname' ]]   [dept[ 'loc' ] =='DALLAS' ] )
+print(dept[['deptno','dname' ]]  [dept[ 'loc' ] =='DALLAS' ] )
 
 ■ Q-205. DALLAS 에서 근무하는 사원들의 이름과 부서위치를 출력하시오
 
@@ -165,7 +154,6 @@ import   pandas   as  pd
 emp = pd.read_csv("c:\\data\\emp3.csv")
 dept = pd.read_csv("c:\\data\\dept3.csv")
 result = pd.merge(  emp, dept,  on='deptno')
-
 print ( result[ ['ename', 'loc'] ] [ result['loc']=='DALLAS' ] )
 
 ■ Q-206.월급이 3000 이상인 사들의 이름과 월급과 부서위치를 출력하시오! 
@@ -226,12 +214,10 @@ select  e.ename,  d.loc
            from  emp  e  full  outer  join  dept   d
            on  ( e.deptno = d.deptno );
 
-Pandas> 
 emp = pd.read_csv("c:\\data\\emp3.csv")
 dept = pd.read_csv("c:\\data\\dept3.csv")
-
 result = pd.merge( emp, dept, on = 'deptno' , how='outer')
-print( result[['ename',  'loc']] ) 
+print( result[['ename', 'loc']] ) 
 
 ■ Q-211 아래의 서브쿼리를 Pandas 로 구현하시오! 
 
@@ -318,7 +304,6 @@ import pandas as pd
 emp=pd.read_csv("c:\\data\\emp3.csv")
 result=emp.groupby('deptno')['sal'].sum().reset_index()
 print(result)
-
 
 ■ Q-219아래의 SQL을 판다스로 구현하시오! 
 
