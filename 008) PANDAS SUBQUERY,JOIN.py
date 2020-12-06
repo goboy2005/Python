@@ -81,9 +81,6 @@ result=emp['sal' ] [ emp['ename'] == name.upper()].values[0]
 print(result)
 
 
-설명 emp데이터 프레임에서 어떤 특정값을 딱 하나만 출력하려면
-위와 같이 작성해줘야 합니다. 
-
 import pandas as pd
 name=input('이름을 입력하세요')
 emp=pd.read_csv("c:\\data\\emp3.csv")
@@ -183,9 +180,7 @@ try:
     emp=pd.read_csv("c:\\data\\emp3.csv")
     print(emp[['ename','job','sal']] [emp['job']==result])
 except LookupError:
-        print('해당 직업을 가진 사없습니다')
-
-
+        print('해당 직업을 가진 사람은없습니다')
 
 
 ■ Q-200.딕셔너리 자료형을 만들고 위와같이 type을 확인하시오 
@@ -241,7 +236,6 @@ dept=pd.read_csv("c:\\data\\dept3.csv")
 print(dept)
 
 
-
 ■ Q-204.부서치가 Dallas 의 부서번호와 부서명(dname)을 
 출력하시오! 
 
@@ -259,10 +253,6 @@ dept = pd.read_csv("c:\\data\\dept3.csv")
 result = pd.merge(  emp, dept,  on='deptno')
 
 print ( result[ ['ename', 'loc'] ] [ result['loc']=='DALLAS' ] )
-
-
-;
-
 
 
 ■ Q-206.월급이 3000 이상인 사들의 이름과 월급과 부서위치를 출력하시오! 
@@ -437,8 +427,6 @@ print(result[[ 'deptno','sal']] [result['deptno'] !=20])
 
 
 ■ Q-220
-
-
 
 
 def coin_prob(num):
