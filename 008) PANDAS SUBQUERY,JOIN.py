@@ -5,6 +5,7 @@ Created on Fri Dec  4 22:30:51 2020
 @author: goboy
 """
 
+Python Day 8 Problems 
 
 ■ Q-191 숫자를 물어보게하고 숫자를 입력하면 해당 숫자만큼 
 1번부터 출력되게하는 코드를 작성하시오 !
