@@ -27,34 +27,14 @@ try:
     a = int( input('숫자를 입력하세요 ') )
     for  i  in  range(1, a+1):
         print (i)
-except:
-    print ('잘못된 값을 입력하셨습니다.')
-
-설명: 위의 코드의 경우에는 숫자를 입력할 때  알파벳 a 를 넣으면
-        예외처리가 되어서 잘못된 값을 입력하셨습니다. 라는 말만 나오고
-        에러대한 정확한 원인파악은 하기가 어렵습니다.
-
-잘못된 값을 입력하셨습니다 말고도 정확한 에러에 대한 원인을 파악을 
-하고 싶다면 아래와 같이 작성하면 됩니다.
-
-try:
-    a = int( input('숫자를 입력하세요 ') )
-    for  i  in  range(1, a+1):
-        print (i)
 except  Exception  as  e:
     print ('잘못된 값을 입력하셨습니다.')
     print (e)  # 에러가 난 이유를 출력해줍니다. 
-
-숫자를 입력하세요 ~  a
-
-잘못된 값을 입력하셨습니다.
-invalid literal for int() with base 10: 'a'
 
 
 ■ Q-193.판다스를 이용해서 emp3.csv의 데이터를 로드하는데 
 이름을 물어보게 하고 이름을 물어보게 하고 이름을 입력하면 해당 사원의
 이름과 월급이 출력되게 하시오! 
-
 
 import pandas as pd
 name=input('이름을 입력하세요')
@@ -66,20 +46,6 @@ print(emp[['ename','sal' ] ] [ emp['ename'] ==name.upper() ])
 ■ Q-194.위의 코드에 사용자 정의 예외처리를 해서 월급이 고소득자는 
 해당 사원의 월급을 볼수 없습니다. 라는 메세지가 출되게게 하시오
 ( 월급이 3000이상인 사원들을 고소득자로 보고 작성하시오) 
-
-import pandas as pd
-name=input('이름을 입력하세요')
-emp=pd.read_csv("c:\\data\\emp3.csv")
-result=emp['sal' ] [ emp['ename'] == name.upper()] 
-print(type(result))
-(result 의 type 이 현재         
-
-import pandas as pd
-name=input('이름을 입력하세요')
-emp=pd.read_csv("c:\\data\\emp3.csv")
-result=emp['sal' ] [ emp['ename'] == name.upper()].values[0]  
-print(result)
-
 
 import pandas as pd
 name=input('이름을 입력하세요')
@@ -103,17 +69,6 @@ if  result >= 3000:
     raise  Exception('해당 사원의 월급은 볼 수 없습니다')
 print ( emp[['ename','sal']] [ emp['ename'] ==name.upper() ])
 
-이름을 입력하세요 ~ smith
-이름을 입력하세요 ~ scott 
-
-이름을 입력하세요 ~ scott
-Traceback (most recent call last):
-
-  File "C:\Users\stu\.spyder-py3\temp.py", line 7, in <module>
-    raise  Exception('해당 사원의 월급은 볼 수 없습니다')
-
-Exception: 해당 사원의 월급은 볼 수 없습니다
-
 ■ Q-196위의 코드를 수정해서 이름을 물어보게하고 이름과 직업을 
  출력하는 코드로 작성하는데 직이 SALESMAN 이면
  해당 사원의 정보는 볼수 없습니다. 라는 메세직 출력되면서
@@ -132,7 +87,6 @@ else:
 ■ Q-197.아래처럼 사원 이름 물어보게하고 사원이름을 입력하면
 해당 사원의 이름과 월급이 출력되게 하시오! 
 
-
 import pandas as pd
 name=input('사원 이름을 입력하세요~') 
 emp=pd.read_csv('c:\\data\\emp3.csv")
@@ -144,30 +98,12 @@ import pandas as pd
 try:
     
     name=input('사원 이름을 입력하세요~') 
-    emp=pd.read_csv("c:\\data\\emp3.csv")
-    print(emp [[ 'ename','sal']]  [emp['ename']==name.upper()].values[0] )
-except LookupError:
-    print('해당 사원은 없습니다')
-
-&
-
-import pandas as pd
-try:
-    
-    name=input('사원 이름을 입력하세요~') 
     result=emp['ename'] [emp['ename']==name.upper()].values[0]
     emp=pd.read_csv("c:\\data\\emp3.csv")
     print(emp [[ 'ename','sal']]  [emp['ename']==result] )
 except LookupError:
     print('해당 사원은 없습니다')
     
-설명: result=emp['ename'][emp['ename']] ==name.upper()].values[0]
-    이 코드에서 Values[0] 을 사용하면 Series(컬럼)가 아니라
-    값으로 출력이 되어서 result 에 담기게 됩니다. 없는 사원이름을
-    입력하면 result 에 값이 입력되지 않게 되므로 LookupError 예외 처리가
-    되어서 해당 사원은 없습니다. 라는 메세지가 출력되는 겁니다. 
-
-
 ■ Q-199(점심시간 문제) 직업을 물어보게하고 직업을 입력하면
 해당 사원의 이름과 직업과 월급이 출력되게 하는 코드를
 성하는데 없는 직업을 입력하면 해당직업은 사원테이블에 없습니다
@@ -190,27 +126,15 @@ print(type(b))
 
 ■ Q-201.아래와 이 두개의 숫자를 각각 물어보게 하고 아래의 메세지가
 출력되게 하시오! 
-
-첫째 숫자를 입력하세요 1113
-두번째 숫자를 입력하세요 ~ 23 
+(첫째 숫자를 입력하세요 1113
+두번째 숫자를 입력하세요 ~ 23 )
 
 a=int(input('숫자를 입력하세요'))
 b=int(input('두번째 숫자를 입력하세요'))
 c=a%b
 print('%d를 %d로 나누면 %d 가 남습니다' %(a,b,c)) 
 
-
 ■ Q-202.  아래와 같이 실행되게 코드를 수행하시오 !
-
-첫번째 숫자를 입력하시오 ~   1113
-두번째 숫자를 입력하시오 ~   23
-
-1113을 23으로 나눈 몫은 48 이고 나머지는 9 입니다. 
-
-첫번째 숫자를 입력하시오 ~   1113
-두번째 숫자를 입력하시오 ~  0 
-
-0 으로는 나눌 수 없습니다. 
 
 try:
     a =  int(  input('첫번째 숫자를 입력하시오 ~ ')  )
@@ -220,21 +144,12 @@ try:
 except  ZeroDivisionError:
     print ('0 으로 나눌 수 없습니다.')
 
-▶ 64 Pandas 를 이용한 데이터 검색 
-
-SQL,Pandas 를 자유롭게 사용할 수 있어야 합니다.
-SQL --- Pandas, Pandas ---SQL
-
-예제: emp[ ['ename','sal']] [emp['ename']=='SCOTT']
-
-
 ■ Q-203 dept3.csv를 판다스로 로드해서 dept데이터 프레임
 전체를 출력하시오! 
 
 import pandas as pd
 dept=pd.read_csv("c:\\data\\dept3.csv")
 print(dept)
-
 
 ■ Q-204.부서치가 Dallas 의 부서번호와 부서명(dname)을 
 출력하시오! 
@@ -245,15 +160,12 @@ print(dept[['deptno','dname' ]]   [dept[ 'loc' ] =='DALLAS' ] )
 
 ■ Q-205. DALLAS 에서 근무하는 사원들의 이름과 부서위치를 출력하시오
 
-Pandas
-
 import   pandas   as  pd
 emp = pd.read_csv("c:\\data\\emp3.csv")
 dept = pd.read_csv("c:\\data\\dept3.csv")
 result = pd.merge(  emp, dept,  on='deptno')
 
 print ( result[ ['ename', 'loc'] ] [ result['loc']=='DALLAS' ] )
-
 
 ■ Q-206.월급이 3000 이상인 사들의 이름과 월급과 부서위치를 출력하시오! 
 
@@ -301,16 +213,11 @@ select e.ename,d.loc
   from emp e, dept d
     where e.deptno(+)=d.deptno ;
 
-모자란 쪽에 (+)를 붙혀줘야 합니다! 
-왜냐하면 
-
 import pandas as pd
 emp=pd.read_csv("c:\\data\\emp3.csv")
 dept=pd.read_csv("c:\\data\\dept3.csv")
 result=pd.merge( emp,dept, on = 'deptno',how='right')
 print(result[[ 'ename','loc']]) 
-
-
 
 ■ Q-210. 아래의 SQL을 Pandas 로 구현하시오 
 
@@ -354,7 +261,6 @@ import pandas as pd
 emp=pd.read_csv("c:\\data\\emp3.csv")
 jjob=emp['job'] [emp ['ename']=='SCOTT'].values[0]
 print(emp[['ename','sal' ]] [(emp['job']==jjob) & (emp['ename']!='SCOTT')]  )
-
 
 ■ Q-213 아래의 SQL을 판다스로 구현하시오! 
 
@@ -426,8 +332,23 @@ result=emp.groupby('deptno')['sal'].sum().reset_index()
 print(result[[ 'deptno','sal']] [result['deptno'] !=20])
 
 
-■ Q-220
+■ Q-220 동전 10개 던져서 0부터 10까지 나올확률을 모두 나열해서 뽑으시오
 
-
-def coin_prob(num):
-    for i in range(num+1):
+def p_coin(num):    
+    import random
+    coin = ['앞면','뒷면']
+    cnt=0
+    
+    for j in range(1,10001):  
+        a=[]
+        
+        for i in range(1,11): 
+            result = random.choice(coin)
+            a.append(result)
+            
+        if a.count('앞면') == num: 
+               cnt += 1       
+    return(cnt/10000)
+   
+for k in range(0,11):
+   print('동전을 10번 던져서', k ,'개 앞면이 나올 확률', p_coin(k))
