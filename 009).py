@@ -5,6 +5,7 @@ Created on Mon Dec  7 17:26:14 2020
 @author: goboy
 """
 
+Python Day 9 Problems 
 
 ■ Q-221.  부서번호, 부서번호별 평균월급을 출력하시오 !
 
