@@ -11,9 +11,8 @@ Python Day 9 Problems
 
 select  deptno, avg(sal)
   from emp
-  group  by deptno;
+     group  by deptno;
 
-pandas>
 import  pandas  as  pd
 emp = pd.read_csv("c:\\data\\emp3.csv")
 result = emp.groupby('deptno')['sal'].mean().reset_index()
@@ -38,25 +37,12 @@ emp = pd.read_csv("c:\\data\\emp3.csv")
 result = emp.groupby('job')['sal'].sum().reset_index()
 print( result )
 
-■ Q-224. 부서위치, 부서위치별 토탈월급을 출력하시오 !
-select  d.loc,  sum(e.sal)
-    from  emp  e,  dept   d
-       where  e.deptno = d.deptno
-           group  by  d.loc; 
-
-import  pandas  as  pd
-emp = pd.read_csv("c:\\data\\emp3.csv")
-dept = pd.read_csv("c:\\data\\dept3.csv")
-result = pd.merge( emp, dept, on ='deptno')
-result2 = result.groupby('loc')['sal'].sum().reset_index()
-print (  result2 )
-
 ■ Q-225.  아래의 SQL을 판다스로 구현하시오 ! 
 
-SQL>  select  d.loc,  nvl(sum(e.sal),0)
-           from  emp  e,  dept   d
-           where  e.deptno (+) = d.deptno
-           group  by  d.loc; 
+select  d.loc,  nvl(sum(e.sal),0)
+ from  emp  e,  dept   d
+    where  e.deptno (+) = d.deptno
+      group  by  d.loc; 
 
 
 import  pandas  as  pd
@@ -66,11 +52,11 @@ result = pd.merge( emp, dept, how='right', on ='deptno')
 result2 = result.groupby('loc')['sal'].sum().reset_index()
 print (  result2 )
 
-■ Q-226.  아래의 SQL을 판다스로 구현하시오 !
+■ Q-226. 아래의 SQL을 판다스로 구현하시오 !
 
-SQL> select   deptno,  count(*)
-         from  emp
-         group  by  deptno;
+select   deptno,  count(*)
+   from  emp
+      group  by  deptno;
 
 import  pandas  as  pd
 emp = pd.read_csv("c:\\data\\emp3.csv")
@@ -176,14 +162,12 @@ for  emp_list  in  emp_csv:
 ■ Q-233.(점심시간 문제)  부서번호가 20번인 사원들의 이름과 월급과 
 부서번호를 출력하시오 ~   
 
-판다스를 이용한 방법:
-
-
 판다스를 이용하지 않은 방법:
-import csv
 
-file=open("c:\\data\\emp2.csv") #os에 있는 emp2.csv를 읽어서 file 변수에 넣는다
-emp_csv=csv.reader(file) # file 변수에 있는 csv 파일을 읽어서 emp_csv 변수에 넣는다
+ import csv
+
+file=open("c:\\data\\emp2.csv")          #os에 있는 emp2.csv를 읽어서 file 변수에 넣는다
+emp_csv=csv.reader(file)                 # file 변수에 있는 csv 파일을 읽어서 emp_csv 변수에 넣는다
 
 for emp_list in emp_csv:
     if int(emp_list[7])==20:
@@ -205,7 +189,7 @@ for emp_list in emp_csv:
 ['7934', 'MILLER', 'CLERK', '7782', '1982-01-11', '1300', '0', '10']
 
 
-■ Q-234.  판다스를 이용해서 emp3.csv 를 읽어다가 이름과 월급을 출력
+■ Q-234. 판다스를 이용해서 emp3.csv 를 읽어다가 이름과 월급을 출력
 하는데 월급을 출력할때 소수점 이하는 버리고 정수부분만
 출력되게하시오 !
 
@@ -217,8 +201,7 @@ print ( emp[['ename', 'sal']] )
         판다스를 이용하지 않았을때와는 다르게 숫자는 바로 숫자형으로
         출력해주고 있습니다.
 
-
-■ Q-235.   판다스를 이용해서 이름과 월급을 출력하는데 월급을 출력할때
+■ Q-235. 판다스를 이용해서 이름과 월급을 출력하는데 월급을 출력할때
 실수형으로 출력하시오 !
 
 import  pandas   as  pd
@@ -231,7 +214,7 @@ emp['sal'] = emp['sal'].apply(float)
 print ( emp[['ename', 'sal']] ) 
 
 
-■ Q-236.  아래의 리스트에서  숫자가 300 이상이면 출력하고 
+■ Q-236. 아래의 리스트에서  숫자가 300 이상이면 출력하고 
 300 미만이면 출력되지 않게 하시오 !
 
 b = [ 100, 352, 254, 456, 123, 234, 567, 903 ] 
@@ -263,11 +246,12 @@ print (max(a))
 ■ Q-238.  사원 테이블에서 최대월급을 출력하시오 !( emp3.csv) 
 
 1. 판다스를 이용했을때
+
 import  pandas  as  pd
 emp = pd.read_csv("c:\\data\\emp3.csv")
 print( emp['sal'].max() )
-                   .min()
-                   .mean()
+                  .min()
+                  .mean()
                    .sum()
 
 2. 판다스를 이용하지 않았을때 
@@ -301,14 +285,13 @@ for  i  in  emp:
     a.append( int(i[2]) )
 print(min(a)) 
 
-
 UnicodeDecodeError: 'cp949' codec can't decode byte 0xec in position 3: illegal multibyte sequence 
 
 emp1222.csv 를 메모장으로 열어서 다른 이름으로 저장하기를 누르고
 인코딩을 확인하면 UTF-8 로 되어있을텐데 이것을 ANSI 로 변경하고
 저장하시오 !
 
-import   csv
+import  csv
 file = open("c:\\data\\emp1222.csv")
 emp = csv.reader(file)
 a = [ ]
@@ -317,7 +300,7 @@ for  i  in  emp:
 print(min(a))
 
 
-■ Q-240.  커미션이 결측치(NaN) 인 사원들의 이름과 커미션을 출력하시오
+■ Q-240. 커미션이 결측치(NaN) 인 사원들의 이름과 커미션을 출력하시오
 
 import  pandas  as  pd
 
@@ -388,10 +371,8 @@ dtype: int64
 (emp3.csv 와 dept3.csv 를 이용해서 조인하세요 )
 
 import  pandas   as  pd
-
 emp = pd.read_csv("c:\\data\\emp3.csv")
 dept = pd.read_csv("c:\\data\\dept3.csv")
-
 result = pd.merge( emp, dept, how='inner', on='deptno')
 print ( result[['ename', 'loc'] ]) 
 
@@ -404,8 +385,8 @@ emp = pd.read_csv("c:\\data\\emp3.csv")
 dept = pd.read_csv("c:\\data\\dept3.csv")
 
 result = pd.merge( emp, dept, how='inner', on='deptno')
-emp['loc'] = result['loc']  # emp 데이터프레임에 loc 컬럼 추가하면서
-print (emp)                  # result 의 loc 로 값을 갱신합니다. 
+emp['loc'] = result['loc']              # emp 데이터프레임에 loc 컬럼 추가하면서
+print (emp)                              # result 의 loc 로 값을 갱신합니다. 
 
 설명: 파생변수를 왜 추가를 하냐면?   
 
@@ -444,7 +425,7 @@ print(result)                                # 변환해서 result 데이터프�
 result2 = pd.merge( emp,  result, how='inner', on='job') 
 print ( result2 )
 
-설명:  emp 에도 sal 이 있고 result 에도 sal 이 있어서 emp 의 sal 은
+설명:   emp 에도 sal 이 있고 result 에도 sal 이 있어서 emp 의 sal 은
         컬럼명이 sal_x 로 변경되었고  result 의 sal 은 sal_y 로 변경되었습니다.
         sal_y 는 해당 직업의 평균월급입니다.
 
@@ -486,5 +467,5 @@ print ( result )
 select  job, sum(sal)
      from  emp
          group  by  job
-             aving  sum(sal) >= 6000
+             having  sum(sal) >= 6000
                  order by  sum(sal)  desc; 
