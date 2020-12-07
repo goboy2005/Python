@@ -35,19 +35,15 @@ name=input('이름을 입력하세요')
 emp=pd.read_csv("c:\\data\\emp3.csv")
 print(emp[['ename','sal' ] ] [ emp['ename'] ==name.upper() ])
 
+■ Q-194.위의 결과에서 월급만 출력하시오 !
 
-■ Q-194.위의 코드에 사용자 정의 예외처리를 해서 월급이 고소득자는 
-해당 사원의 월급을 볼수 없습니다. 라는 메세지가 출되게게 하시오
-( 월급이 3000이상인 사원들을 고소득자로 보고 작성하시오) 
+import  pandas  as  pd
 
-import pandas as pd
-name=input('이름을 입력하세요')
-emp=pd.read_csv("c:\\data\\emp3.csv")
-result=emp['sal'] [ emp['ename'] == name.upper()].values[0]
-if result>3000:
-    raise Exception('해당 사원의 월급은 볼 수 없습니다')
-print(result)
-    #print(emp[['ename']] , [emp['ename']] == name.upper() )
+name = input('이름을 입력하세요 ~ ') 
+emp = pd.read_csv("c:\\data\\emp3.csv")
+result = emp[ 'sal' ] [ emp['ename'] == name.upper() ].values[0] 
+print( result  )
+
 
 ■ Q-195. 위의 코드에 사용자 정의 예외처리를 해서 월급이 고소득자는
 해당 사원의 월급을 볼 수 없습니다. 라는 메세지가 출력되게하시오
