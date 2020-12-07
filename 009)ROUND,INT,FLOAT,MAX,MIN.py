@@ -469,3 +469,12 @@ select  job, sum(sal)
          group  by  job
              having  sum(sal) >= 6000
                  order by  sum(sal)  desc; 
+ 
+ 
+import pandas as pd
+emp = pd.read_csv("c:\\data\\emp3.csv")
+result = emp.groupby('job')['sal'].sum().reset_index()
+result = result[['job','sal']][result['sal']>=6000]
+result = result.sort_values('sal',ascending=False)
+print(result)
+
