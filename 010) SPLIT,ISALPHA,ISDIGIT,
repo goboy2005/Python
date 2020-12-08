@@ -27,7 +27,6 @@ emp_csv = csv.reader(file)
 for  emp_list  in  emp_csv:
     print (emp_list[1] )
 
-
 ■ Q-256. 위의 출력된 이름의 데이터 유형이 무엇인지 확인하시오 !
 
 import   csv 
@@ -43,7 +42,7 @@ import   csv
 file = open("c:\\data\\emp2.csv")
 emp_csv = csv.reader(file)
 for  emp_list  in  emp_csv:
-    print (emp_list[1][0])  # a[0]
+    print (emp_list[1][0])           # a[0]
 
 ■ Q-258.  위의 결과를 다시 출력하는 첫번째 철자가 소문자로 출력되게하시오
              ( 힌트:   'SCOTT'.lower()   )  
@@ -94,7 +93,7 @@ for  emp_list  in  emp_csv:
 
 ■ Q-262.  아래의 SQL 을 파이썬으로 구현하시오 ! (emp2.csv 를 이용하세요)
 
-SQL> select  ename || job
+ select  ename || job
            from  emp;
 
 파이썬>
@@ -113,8 +112,6 @@ KING 의 직업은 PRESIDENT 입니다.
 BLAKE 의 직업은 MANAGER 입니다. 
   : 
   :
-
-파이썬>
 import   csv 
 file = open("c:\\data\\emp2.csv")
 emp_csv = csv.reader(file)
@@ -201,7 +198,7 @@ print (cnt)
 
 
 ■ Q-270. (점심시간 문제) 겨울왕국 스크립트에서 elsa 라는 문자열(단어)이
-몇번 나오는가?   세원이 코드를 실행하세요 ~
+몇번 나오는가?  
 
 winter = open("c:\\data\\winter.txt")  # winter.txt 를 winter 로 불려온다.
 winter2 = winter.read().split("\n") # 엔터로 먼저 줄 단위로 분리를 해야함
@@ -215,7 +212,6 @@ for i in winter2:
 
 Elsa 329
 
-오전에 배웠던 내용으로만 elsa 가 몇건 들어있는지 카운트
 
 winter = open("c:\\data\\winter.txt")  # winter.txt 를 winter 로 불려온다.
 winter2 = winter.read().split(" ")
@@ -248,13 +244,12 @@ for i in winter2:
 위에 방법은 세원이가 한 방법이고 아래는 건준이가 한 방법 
 
 winter=open('c:\\data\\winter.txt')
-winter2=winter.read().split()  # 아무것도 안쓰면 어절별로 나뉜다. 
-cnt=0                             # 아무것도 안쓰면 기본값이 어절별입니다. 
-for i in winter2:  # 어절별로 분리한 것들을 하나씩 가져오면서 
+winter2=winter.read().split()       # 아무것도 안쓰면 어절별로 나뉜다. 
+cnt=0                                 # 아무것도 안쓰면 기본값이 어절별입니다. 
+for i in winter2:                    # 어절별로 분리한 것들을 하나씩 가져오면서 
     if 'elsa' in i.lower():
         cnt+=1
 print(cnt)
-
 
 
 ■ Q-272. 스티븐 잡스 연설문인 jobs.txt 를 한행 한행씩 출력하시오 !
@@ -286,7 +281,7 @@ for  i  in  stev2:
         if  k.isalpha() == True:
             cnt = cnt + 1
 
-print(cnt)                     # 9255 
+print(cnt)                               # 9255 
 
 
 ■ Q-275. 스티븐 잡스 연설문에는 숫자가 몇개가 있는지 출력하시오 !
@@ -406,31 +401,31 @@ plt.show()
  코드와 그래프를 같이 올리세요 ~~
 
 
-import random
-def coin_prob(num):
-    coin = ['앞면','뒷면']
-    cnt = 0
-    for k in range(1,10001):
-        a = [ ]
-        for i in range(1,11):
-            result = random.choice(coin)
-            a.append(result)
-        if a.count('앞면') == num:
-            cnt = cnt + 1
-    return cnt/10000
+import matplotlib.pyplot as plt
 
-b=[]
-for i in range(0,11):
-    result2 = coin_prob(i)
-    b.append(result2)
+x=[1,2,3,4,5,6,7,8,9,10]
+y=[]
 
-import matplotlib.pyplot as plt
+def coin_prob(num):
+    import random
+    coin=['앞면','뒷면']
+    cnt=0
+    for j in range(1,10001):
+        a=[]
+        for i in range(1,11):
+            result=random.choice(coin)
+            a.append(result)
+        if a.count('앞면')==num:
+            cnt=cnt+1
+    
+    return cnt/10000
 
-y_value = b
-x_index = [0,1,2,3,4,5,6,7,8,9,10]
+for k in range(1,11):
+    y.append(coin_prob(k))            
 
-plt.bar ( x_index, y_value)
-plt.title('Coin Probability')
-plt.xlabel('cnt')
+
+plt.bar(x,y,color='skyblue')
+plt.title('Coin Probability')
+plt.xlabel('tries')
 plt.ylabel('probability')
-plt.show()
+show()
