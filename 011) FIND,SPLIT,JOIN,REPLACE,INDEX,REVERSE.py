@@ -5,6 +5,8 @@ Created on Thu Dec 10 14:41:18 2020
 @author: goboy
 """
 
+Python Day 11 Problems 
+
 
 ■Q-284.  우리반 데이터(emp122.csv) 를 파이썬으로 로드해서
  이메일만 출력하시오 !
@@ -71,12 +73,7 @@ for  emp_list  in  emp_csv:
     b = emp_list[6].rfind('.')    # .  의 위치 인덱스 번호를 뒤에서 부터 찾음
     print ( emp_list[6][ a +1 : b ] )
 
-■Q-290. rfind도 domain.co.kr 같은곳은 domain.co까지 끊겨서 
-문제생기지 않을까요?
-
-
-
-
+    
 ■ Q-291. 아래의 url 변수에 있는 문자열은 슬래쉬(/) 로 구분되어있는데
             이 문자열의 요소를 아래의 리스트 처럼 구성하시오 !
 
