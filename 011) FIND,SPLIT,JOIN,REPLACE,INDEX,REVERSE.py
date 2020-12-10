@@ -8,7 +8,7 @@ Created on Thu Dec 10 14:41:18 2020
 Python Day 11 Problems 
 
 
-■Q-284.  우리반 데이터(emp122.csv) 를 파이썬으로 로드해서
+■ Q-284.  우리반 데이터(emp122.csv) 를 파이썬으로 로드해서
  이메일만 출력하시오 !
 
 import  csv
@@ -17,7 +17,7 @@ emp_csv = csv.reader(file)
 for  emp_list  in  emp_csv:
     print ( emp_list[6] )
 
-■Q-285.  위에서 출력한 이메일에서 @ 의 위치 인덱스 번호를
+■ Q-285.  위에서 출력한 이메일에서 @ 의 위치 인덱스 번호를
 출력하시오 !
 
 import  csv
@@ -26,7 +26,7 @@ emp_csv = csv.reader(file)
 for  emp_list  in  emp_csv:
     print ( emp_list[6].find('@') )
 
-■Q-286. 그러면 이번에는 이메일에서 . 의 위치 인덱스를 출력하시오
+■ Q-286. 그러면 이번에는 이메일에서 . 의 위치 인덱스를 출력하시오
 
 import  csv
 file = open("c:\\data\\emp122.csv", encoding="UTF8")
@@ -34,7 +34,7 @@ emp_csv = csv.reader(file)
 for  emp_list  in  emp_csv:
     print ( emp_list[6].find('.') )
 
-■Q-287.   이번에는 이메일을 출력하는데 이메일의 첫번째 철자부터
+■ Q-287.   이번에는 이메일을 출력하는데 이메일의 첫번째 철자부터
 세번째 철자까지만 출력하시오 !
 
 import  csv
@@ -43,7 +43,7 @@ emp_csv = csv.reader(file)
 for  emp_list  in  emp_csv:
     print ( emp_list[6][0:4] )
 
-■Q-288.  우리반 데이터 이메일을 출력하는데 이메일에서 도메인만 출력하시오
+■ Q-288.  우리반 데이터 이메일을 출력하는데 이메일에서 도메인만 출력하시오
 
  gmail
  gmail
@@ -62,7 +62,7 @@ for  emp_list  in  emp_csv:
     b = emp_list[6].find('.')    # .  의 위치 인덱스 번호 
     print ( emp_list[6][ a +1 : b ] )
 
-■Q-289. 미승이의 이메일인 miseung.hailey@gmail.com 도 같이 
+■ Q-289. 미승이의 이메일인 miseung.hailey@gmail.com 도 같이 
 출력하려면 어떻게 해야하는가 ?
 
 import  csv
