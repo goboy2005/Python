@@ -33,7 +33,7 @@ emp_csv = csv.reader(file)
 for  emp_list  in  emp_csv:
     print ( emp_list[6].find('.') )
 
-■Q-287.   이번에는 이메일을 출력하는데 이메일의 첫번째 철자부터
+■ Q-287.   이번에는 이메일을 출력하는데 이메일의 첫번째 철자부터
 세번째 철자까지만 출력하시오 !
 
 import  csv
@@ -42,7 +42,7 @@ emp_csv = csv.reader(file)
 for  emp_list  in  emp_csv:
     print ( emp_list[6][0:4] )
 
-■Q-288.  우리반 데이터 이메일을 출력하는데 이메일에서 도메인만 출력하시오
+■ Q-288.  우리반 데이터 이메일을 출력하는데 이메일에서 도메인만 출력하시오
  gmail
  gmail
  naver
@@ -57,7 +57,7 @@ for  emp_list  in  emp_csv:
     print ( emp_list[6][ a +1 : b ] )
 
 
-■Q-289. 미승이의 이메일인 miseung.hailey@gmail.com 도 같이 
+■ Q-289. 미승이의 이메일인 miseung.hailey@gmail.com 도 같이 
 출력하려면 어떻게 해야하는가 ?
 
 import csv
@@ -78,7 +78,7 @@ result = url.split('/')
 print (result)
 
 
-■Q-292.  우리반 데이터에서 이름만 출력하시오 !
+■ Q-292.  우리반 데이터에서 이름만 출력하시오 !
 
 import  csv
 file = open("c:\\data\\emp123.csv", encoding="UTF8")
@@ -99,7 +99,7 @@ for  emp_list  in  emp_csv:
 print(a)
 
 
-■Q-294.  위의 a 리스트에 담겨진 이름을 하나씩 뽑아서 콤마(,) 로 연결해서
+■ Q-294.  위의 a 리스트에 담겨진 이름을 하나씩 뽑아서 콤마(,) 로 연결해서
 아래와 같이 문자열로 출력되게하시오
 이준혁,한결,현지연,성기창,유혜영,......................
 
@@ -113,7 +113,7 @@ bond=','
 result = bond.join(a)
 print(result)
 
-■Q-295.  위의 결과가 김씨부터 출력되게하시오 ~ 
+■ Q-295.  위의 결과가 김씨부터 출력되게하시오 ~ 
  (한글을 정렬을 해서 출력하시오 ㄱ ㄴ ㄷ ㄹ 순서로)
 
 import  csv
@@ -127,7 +127,7 @@ bond=','
 result = bond.join(a)
 print(result)
 
-■Q-296.  emp2.csv 에서 이름과 월급을 출력하는데 월급을 출력할 때
+■ Q-296.  emp2.csv 에서 이름과 월급을 출력하는데 월급을 출력할 때
 0 대신에 * 로 출력하시오 !
 
  SCOTT   3***
@@ -140,7 +140,7 @@ emp_csv=csv.reader(file)
 for  emp_list  in  emp_csv:
     print( emp_list[1], emp_list[5].replace('0','*' ) )
 
-■Q-297. 아래의 리스트를 가지고 아래와 같이 출력하시오 !
+■ Q-297. 아래의 리스트를 가지고 아래와 같이 출력하시오 !
 
 a = [ 'name:홍길동', 'age:17', 'major:경영학', 'nation:한국' ]
 
@@ -154,7 +154,7 @@ a = [ 'name:홍길동', 'age:17', 'major:경영학', 'nation:한국' ]
 for  i in  a:
     print ( i.replace( ':' , ' ----> ')  )
 
-■Q-298. (점심시간 문제)  우리반 데이터에서 이름을 출력하는데
+■ Q-298. (점심시간 문제)  우리반 데이터에서 이름을 출력하는데
 아래와 같이 나이도 같이 출력되게하시오 !
 
 
