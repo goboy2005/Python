@@ -5,6 +5,7 @@ Created on Fri Dec 11 18:40:13 2020
 @author: goboy
 """
 
+Python Day 12 Problems 
 
 ■ Q-284.  우리반 데이터(emp122.csv) 를 파이썬으로 로드해서
  이메일만 출력하시오 !
